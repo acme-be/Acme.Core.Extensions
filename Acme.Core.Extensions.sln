@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Core.Extensions", "Acme.Core.Extensions\Acme.Core.Extensions.csproj", "{312D0F78-B9BC-4E78-AA42-77290B9E92E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Core.Extensions.Tests", "Acme.Core.Extensions.Tests\Acme.Core.Extensions.Tests.csproj", "{405CD7E2-BBC9-45A4-9683-9A8BDA0774C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{312D0F78-B9BC-4E78-AA42-77290B9E92E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312D0F78-B9BC-4E78-AA42-77290B9E92E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312D0F78-B9BC-4E78-AA42-77290B9E92E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{405CD7E2-BBC9-45A4-9683-9A8BDA0774C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405CD7E2-BBC9-45A4-9683-9A8BDA0774C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405CD7E2-BBC9-45A4-9683-9A8BDA0774C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405CD7E2-BBC9-45A4-9683-9A8BDA0774C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
