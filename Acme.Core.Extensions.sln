@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{12911031-E695-472C-AEAB-CB0DF5175BFD}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		logo.png = logo.png
 		README.md = README.md
 	EndProjectSection
 EndProject
