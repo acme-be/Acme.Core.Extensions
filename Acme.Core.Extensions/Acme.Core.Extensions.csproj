@@ -4,8 +4,19 @@
     <TargetFrameworks>netstandard2.0;net45;net46;net47</TargetFrameworks>
     <PackageId>Acme.Core.Extensions</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Acme</Authors>
-    <Company>Acme</Company>
+    <Authors>Simon Baudart</Authors>
+    <Company>ACME</Company>
+    <Description>SUseful extensions for .net framework types. This is a pure utility package and should be kept as simple as possible but also as powerful as possible :)</Description>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Acme.Core.Extensions.xml</DocumentationFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageProjectUrl>https://github.com/simonbaudart/Acme.Core.Extensions</PackageProjectUrl>
+    <PackageTags>utility extensions</PackageTags>
+    <RepositoryUrl>https://github.com/simonbaudart/Acme.Core.Extensions</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/simonbaudart/Acme.Core.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>© ACME</Copyright>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
