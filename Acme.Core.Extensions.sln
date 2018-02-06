@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Core.Extensions", "Acme.Core.Extensions\Acme.Core.Extensions.csproj", "{312D0F78-B9BC-4E78-AA42-77290B9E92E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acme.Core.Extensions", "Acme.Core.Extensions\Acme.Core.Extensions.csproj", "{312D0F78-B9BC-4E78-AA42-77290B9E92E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Core.Extensions.Tests", "Acme.Core.Extensions.Tests\Acme.Core.Extensions.Tests.csproj", "{405CD7E2-BBC9-45A4-9683-9A8BDA0774C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{12911031-E695-472C-AEAB-CB0DF5175BFD}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
