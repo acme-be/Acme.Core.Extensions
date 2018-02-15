@@ -14,6 +14,9 @@ using Acme.Core.Extensions;
 ```
 
 ## Changes
+### 1.1.0
+* Adds StringExtensions.ReplaceSpecialChars
+
 ### 1.0.0
 * Adds ByteArrayExtensions.ToHexadecimalString
 * Adds DateTimeExtensions.ToUnixTimeStamp
@@ -44,3 +47,6 @@ You can also have a look at the unit test project, it contains most of the exten
 ## ObjectExtensions
 * EnsureNotNull : Throws an ArgumentNullException if the object is null, or return the object. Help to validate that parameters are not null and follow. Works with class and nullable struct. Read more :  https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1062-validate-arguments-of-public-methods
 * ThrowIfNull : Throws an ArgumentNullException if the object is null. Help to validate that parameters are not null and follow. Works with class and nullable struct. Read more :  https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1062-validate-arguments-of-public-methods
+
+## StringExtensions
+* ReplaceSpecialChars : Remove all special chars and accent from a string, can also replace spaces with '-'
