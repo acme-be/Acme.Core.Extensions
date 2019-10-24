@@ -18,6 +18,7 @@
     <Copyright>© ACME</Copyright>
     <Version>1.0.0</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/simonbaudart/Acme.Core.Extensions/master/logo.png</PackageIconUrl>
+    <PackageVersion>1.1.1</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
