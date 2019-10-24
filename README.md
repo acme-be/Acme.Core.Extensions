@@ -50,3 +50,4 @@ You can also have a look at the unit test project, it contains most of the exten
 
 ## StringExtensions
 * ReplaceSpecialChars : Remove all special chars and accent from a string, can also replace spaces with '-'
+* SHA512 : Generate a SHA512 from the string.

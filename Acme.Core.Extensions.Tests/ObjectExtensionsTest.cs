@@ -12,13 +12,13 @@ namespace Acme.Core.Extensions.Tests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
-    ///     The object extensions test.
+    /// The object extensions test.
     /// </summary>
     [TestClass]
     public class ObjectExtensionsTest
     {
         /// <summary>
-        ///     Ensure not null with class.
+        /// Ensure not null with class.
         /// </summary>
         [TestMethod]
         public void EnsureNotNullWithClass()
@@ -29,7 +29,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Ensure not null with class and null value.
+        /// Ensure not null with class and null value.
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -42,7 +42,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Ensure not null with struct and null value.
+        /// Ensure not null with struct and null value.
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -55,7 +55,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Ensure not null with struct.
+        /// Ensure not null with struct.
         /// </summary>
         [TestMethod]
         public void EnsureNotNullWithStruct()
@@ -66,7 +66,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Throw if null with class.
+        /// Throw if null with class.
         /// </summary>
         [TestMethod]
         public void ThrowIfNullWithClass()
@@ -76,7 +76,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Throw if null with class and null value.
+        /// Throw if null with class and null value.
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -89,7 +89,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Throw if null with struct and null value.
+        /// Throw if null with struct and null value.
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -102,7 +102,7 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        ///     Throw if null with struct.
+        /// Throw if null with struct.
         /// </summary>
         [TestMethod]
         public void ThrowIfNullWithStruct()

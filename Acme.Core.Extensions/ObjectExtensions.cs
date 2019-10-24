@@ -10,13 +10,13 @@ namespace Acme.Core.Extensions
     using System.Linq;
 
     /// <summary>
-    ///     The object extensions.
+    /// The object extensions.
     /// </summary>
     public static class ObjectExtensions
     {
         /// <summary>
-        ///     Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
-        ///     <see cref="ArgumentNullException" />.
+        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
+        /// <see cref="ArgumentNullException" />.
         /// </summary>
         /// <typeparam name="T">The object type</typeparam>
         /// <param name="value">The value.</param>
@@ -30,8 +30,8 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
-        ///     Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
-        ///     <see cref="ArgumentNullException" />.
+        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
+        /// <see cref="ArgumentNullException" />.
         /// </summary>
         /// <typeparam name="T">The object type</typeparam>
         /// <param name="value">The value.</param>
@@ -45,8 +45,8 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
-        ///     Extension method on object, which throws an <see cref="ArgumentNullException" /> if
-        ///     <paramref name="value" /> is null.
+        /// Extension method on object, which throws an <see cref="ArgumentNullException" /> if
+        /// <paramref name="value" /> is null.
         /// </summary>
         /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value to check.</param>
@@ -62,8 +62,8 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
-        ///     Extension method on object, which throws an <see cref="ArgumentNullException" /> if
-        ///     <paramref name="value" /> is null.
+        /// Extension method on object, which throws an <see cref="ArgumentNullException" /> if
+        /// <paramref name="value" /> is null.
         /// </summary>
         /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value to check.</param>

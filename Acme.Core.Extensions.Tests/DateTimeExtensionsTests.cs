@@ -12,7 +12,7 @@ namespace Acme.Core.Extensions.Tests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
-    ///     The date time extensions tests.
+    /// The date time extensions tests.
     /// </summary>
     [TestClass]
     public class DateTimeExtensionsTests

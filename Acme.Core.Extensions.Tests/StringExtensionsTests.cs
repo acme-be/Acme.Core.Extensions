@@ -18,6 +18,26 @@ namespace Acme.Core.Extensions.Tests
     public class StringExtensionsTests
     {
         /// <summary>
+        /// Replaces the special chars with multiple spaces
+        /// </summary>
+        [TestMethod]
+        public void ReplaceSpecialCharsWithBeta()
+        {
+            var result = "This Is Spartaaaaà                !!! ß".ReplaceSpecialChars(true);
+            Assert.AreEqual("this-is-spartaaaaa-b", result);
+        }
+
+        /// <summary>
+        /// Replaces the special chars with multiple spaces
+        /// </summary>
+        [TestMethod]
+        public void ReplaceSpecialCharsWithMultipleSpace()
+        {
+            var result = "This Is Spartaaaaà                !!!".ReplaceSpecialChars(true);
+            Assert.AreEqual("this-is-spartaaaaa", result);
+        }
+
+        /// <summary>
         /// Replaces the special chars without replacing the space.
         /// </summary>
         [TestMethod]
@@ -38,23 +58,25 @@ namespace Acme.Core.Extensions.Tests
         }
 
         /// <summary>
-        /// Replaces the special chars with multiple spaces
+        /// Valide SHA512.
         /// </summary>
         [TestMethod]
-        public void ReplaceSpecialCharsWithMultipleSpace()
+        public void SHA512Null()
         {
-            var result = "This Is Spartaaaaà                !!!".ReplaceSpecialChars(true);
-            Assert.AreEqual("this-is-spartaaaaa", result);
+            string nullstring = null;
+            // ReSharper disable once ExpressionIsAlwaysNull
+            var sha512 = nullstring.SHA512();
+            Assert.IsNull(sha512);
         }
 
         /// <summary>
-        /// Replaces the special chars with multiple spaces
+        /// Valide SHA512.
         /// </summary>
         [TestMethod]
-        public void ReplaceSpecialCharsWithBeta()
+        public void SHA512Ok()
         {
-            var result = "This Is Spartaaaaà                !!! ß".ReplaceSpecialChars(true);
-            Assert.AreEqual("this-is-spartaaaaa-b", result);
+            var sha512 = "Hello World".SHA512();
+            Assert.AreEqual("2C74FD17EDAFD80E8447B0D46741EE243B7EB74DD2149A0AB1B9246FB30382F27E853D8585719E0E67CBDA0DAA8F51671064615D645AE27ACB15BFB1447F459B", sha512);
         }
     }
 }

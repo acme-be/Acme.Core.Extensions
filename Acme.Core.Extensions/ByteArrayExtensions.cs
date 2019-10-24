@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="ByteArrayExtensions.cs" company="Funcky">
-//  Copyright (c) Funcky. All rights reserved.
+//  <copyright file="ByteArrayExtensions.cs" company="Acme">
+//  Copyright (c) Acme. All rights reserved.
 //  </copyright>
 // -----------------------------------------------------------------------
 

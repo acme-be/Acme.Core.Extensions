@@ -11,6 +11,8 @@ namespace Acme.Core.Extensions
     using System.Text;
     using System.Text.RegularExpressions;
 
+    using Acme.Core.Extensions.Helpers;
+
     /// <summary>
     /// Contains all the extensions to string
     /// </summary>
@@ -49,6 +51,16 @@ namespace Acme.Core.Extensions
             value = Regex.Replace(value, "[-]+", "-").Trim('-', ' ');
 
             return value;
+        }
+
+        /// <summary>
+        /// Returns the SHA512 for a string.
+        /// </summary>
+        /// <param name="value">The value to be hashed.</param>
+        /// <returns>The computed SHA512</returns>
+        public static string SHA512(this string value)
+        {
+            return value == null ? null : HashHelper.SHA512(value);
         }
     }
 }
