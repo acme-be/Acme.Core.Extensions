@@ -14,7 +14,7 @@ using Acme.Core.Extensions;
 ```
 
 ## Changes
-### 1.1.0
+### 1.2.0
 * Added DateTimeExtensions.DateOrNull
 * Added ObjectExtensions.ExecuteOrNull
 
