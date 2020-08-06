@@ -15,6 +15,16 @@ namespace Acme.Core.Extensions
     public static class DateTimeExtensions
     {
         /// <summary>
+        /// Returns the Date property of the object of the date is not null. Otherwise, returns null.
+        /// </summary>
+        /// <param name="date">The date to check.</param>
+        /// <returns>The Date property or null.</returns>
+        public static DateTime? DateOrNull(this DateTime? date)
+        {
+            return date.ExecuteOrNull(x => x?.Date);
+        }
+
+        /// <summary>
         /// Convert DateTime to the unix time stamp.
         /// </summary>
         /// <param name="date">The date.</param>

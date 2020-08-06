@@ -77,5 +77,23 @@ namespace Acme.Core.Extensions
                 throw new ArgumentNullException(parameterName);
             }
         }
+
+        /// <summary>
+        /// Execute a call on the source if null, or return the default for the type <see cref="TReturn"/>.
+        /// </summary>
+        /// <param name="value">The value to check if null.</param>
+        /// <param name="call">The labmda to call if not null.</param>
+        /// <typeparam name="TSource">The source type.</typeparam>
+        /// <typeparam name="TReturn">The return type of the func.</typeparam>
+        /// <returns></returns>
+        public static TReturn ExecuteOrNull<TSource, TReturn>(this TSource value, Func<TSource, TReturn> call)
+        {
+            if (value == null)
+            {
+                return default;
+            }
+
+            return call(value);
+        }
     }
 }

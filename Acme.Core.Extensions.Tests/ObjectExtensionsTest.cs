@@ -110,5 +110,28 @@ namespace Acme.Core.Extensions.Tests
             int? t = 42;
             t.ThrowIfNull(nameof(t));
         }
+
+        /// <summary>
+        /// Test the method xecuteOrNull with a simple cas.
+        /// </summary>
+        [TestMethod]
+        public void ExecuteOrNullSimple()
+        {
+            var value = "Have a lot of fun !";
+            var returned = value.ExecuteOrNull((x) => x.Length);
+            Assert.AreEqual(19, returned);
+        }
+
+        /// <summary>
+        /// Test the method xecuteOrNull with a null value.
+        /// </summary>
+        [TestMethod]
+        public void ExecuteOrNullWithNull()
+        {
+            string value = null;
+            // ReSharper disable once ExpressionIsAlwaysNull
+            var returned = value.ExecuteOrNull((x) => x.Length);
+            Assert.AreEqual(default, returned);
+        }
     }
 }
