@@ -79,7 +79,7 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
-        /// Execute a call on the source if null, or return the default for the type <see cref="TReturn"/>.
+        /// Execute a call on the source if null, or return the default for the type TReturn.
         /// </summary>
         /// <param name="value">The value to check if null.</param>
         /// <param name="call">The labmda to call if not null.</param>
