@@ -14,10 +14,10 @@
     <PackageProjectUrl>https://github.com/simonbaudart/Acme.Core.Extensions</PackageProjectUrl>
     <PackageTags>utility extensions</PackageTags>
     <RepositoryUrl>https://github.com/simonbaudart/Acme.Core.Extensions</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/simonbaudart/Acme.Core.Extensions/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>© ACME</Copyright>
     <Version>1.0.0</Version>
-    <PackageIconUrl>https://raw.githubusercontent.com/simonbaudart/Acme.Core.Extensions/master/logo.png</PackageIconUrl>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageVersion>1.2.0</PackageVersion>
   </PropertyGroup>
 
@@ -28,5 +28,33 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard2.0\Acme.Core.Extensions.xml</DocumentationFile>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\stylecop.json">
+      <Link>stylecop.json</Link>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\LICENSE" Pack="true" PackagePath="">
+      <Link>LICENSE</Link>
+    </Content>
+    
+    <Content Include="..\logo.png" Pack="true" PackagePath="">
+      <Link>logo.png</Link>
+    </Content>
+  </ItemGroup>
 
 </Project>

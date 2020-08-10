@@ -12,7 +12,7 @@ namespace Acme.Core.Extensions
     using System.Text;
 
     /// <summary>
-    /// All extensions for the byte array
+    /// All extensions for the byte array.
     /// </summary>
     public static class ByteArrayExtensions
     {
@@ -20,7 +20,7 @@ namespace Acme.Core.Extensions
         /// To the string hexadecimal.
         /// </summary>
         /// <param name="bytes">The bytes.</param>
-        /// <returns>The hexadecimal string</returns>
+        /// <returns>The hexadecimal string.</returns>
         public static string ToHexadecimalString(this byte[] bytes)
         {
             var output = new StringBuilder();

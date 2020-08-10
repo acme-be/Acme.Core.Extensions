@@ -18,7 +18,7 @@ namespace Acme.Core.Extensions
         /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
         /// <see cref="ArgumentNullException" />.
         /// </summary>
-        /// <typeparam name="T">The object type</typeparam>
+        /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value.</param>
         /// <param name="parameterName">Name of the parameter.</param>
         /// <returns>the specified <paramref name="value" />.</returns>
@@ -33,7 +33,7 @@ namespace Acme.Core.Extensions
         /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
         /// <see cref="ArgumentNullException" />.
         /// </summary>
-        /// <typeparam name="T">The object type</typeparam>
+        /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value.</param>
         /// <param name="parameterName">Name of the parameter.</param>
         /// <returns>the specified <paramref name="value" />.</returns>
@@ -85,7 +85,7 @@ namespace Acme.Core.Extensions
         /// <param name="call">The labmda to call if not null.</param>
         /// <typeparam name="TSource">The source type.</typeparam>
         /// <typeparam name="TReturn">The return type of the func.</typeparam>
-        /// <returns></returns>
+        /// <returns>The returned value from the call.</returns>
         public static TReturn ExecuteOrNull<TSource, TReturn>(this TSource value, Func<TSource, TReturn> call)
         {
             if (value == null)
