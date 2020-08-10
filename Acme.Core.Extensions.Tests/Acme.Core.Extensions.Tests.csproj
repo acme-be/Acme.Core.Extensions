@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ByteArrayExtensionsTests.cs" />
     <Compile Include="DateTimeExtensionsTests.cs" />
+    <Compile Include="Helpers\SecurityHelperTests.cs" />
     <Compile Include="ObjectExtensionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringExtensionsTests.cs" />

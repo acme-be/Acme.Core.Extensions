@@ -14,6 +14,9 @@ using Acme.Core.Extensions;
 ```
 
 ## Changes
+### 1.3.0
+* Add a method SecurityHelper.CreateCryptographicallySecureGuid
+
 ### 1.2.1
 * Change the Exception from EnsureNotNull to a ObjectIsNullException to avoid confusion with the ParameterNullException.
 
@@ -60,3 +63,6 @@ You can also have a look at the unit test project, it contains most of the exten
 ## StringExtensions
 * ReplaceSpecialChars : Remove all special chars and accent from a string, can also replace spaces with '-'
 * SHA512 : Generate a SHA512 from the string.
+
+## SecurityHelper
+* CreateCryptographicallySecureGuid : Create a guid that is secure and not predictable.
