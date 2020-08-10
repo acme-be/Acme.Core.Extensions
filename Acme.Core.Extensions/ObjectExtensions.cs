@@ -9,39 +9,47 @@ namespace Acme.Core.Extensions
     using System;
     using System.Linq;
 
+    using Acme.Core.Extensions.Exceptions;
+
     /// <summary>
     /// The object extensions.
     /// </summary>
     public static class ObjectExtensions
     {
         /// <summary>
-        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
-        /// <see cref="ArgumentNullException" />.
+        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an <see cref="ObjectIsNullException" />.
         /// </summary>
         /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value.</param>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="message">The message to add to the Exception if value is null.</param>
         /// <returns>the specified <paramref name="value" />.</returns>
-        public static T EnsureNotNull<T>(this T value, string parameterName)
+        public static T EnsureNotNull<T>(this T value, string message)
             where T : class
         {
-            value.ThrowIfNull(parameterName);
+            if (value == null)
+            {
+                throw new ObjectIsNullException(message);
+            }
+
             return value;
         }
 
         /// <summary>
-        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
-        /// <see cref="ArgumentNullException" />.
+        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an <see cref="ObjectIsNullException" />.
         /// </summary>
         /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value.</param>
-        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="message">Name of the parameter.</param>
         /// <returns>the specified <paramref name="value" />.</returns>
-        public static T? EnsureNotNull<T>(this T? value, string parameterName)
+        public static T? EnsureNotNull<T>(this T? value, string message)
             where T : struct
         {
-            value.ThrowIfNull(parameterName);
-            return value;
+            if (value == null)
+            {
+                throw new ObjectIsNullException(message);
+            }
+
+            return value.Value;
         }
 
         /// <summary>

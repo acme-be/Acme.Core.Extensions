@@ -9,6 +9,8 @@ namespace Acme.Core.Extensions.Tests
     using System;
     using System.Linq;
 
+    using Acme.Core.Extensions.Exceptions;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
@@ -32,7 +34,7 @@ namespace Acme.Core.Extensions.Tests
         /// Ensure not null with class and null value.
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ObjectIsNullException))]
         public void EnsureNotNullWithNullClass()
         {
             object t = null;
@@ -45,7 +47,7 @@ namespace Acme.Core.Extensions.Tests
         /// Ensure not null with struct and null value.
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ObjectIsNullException))]
         public void EnsureNotNullWithNullStruct()
         {
             int? t = null;
