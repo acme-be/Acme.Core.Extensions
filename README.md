@@ -14,6 +14,9 @@ using Acme.Core.Extensions;
 ```
 
 ## Changes
+### 1.2.1
+* Change the Exception from EnsureNotNull to a ObjectIsNullException to avoid confusion with the ParameterNullException.
+
 ### 1.2.0
 * Added DateTimeExtensions.DateOrNull
 * Added ObjectExtensions.ExecuteOrNull
