@@ -17,13 +17,14 @@ namespace Acme.Core.Extensions
     public static class ObjectExtensions
     {
         /// <summary>
-        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an <see cref="ObjectIsNullException" />.
+        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
+        /// <see cref="ObjectIsNullException" />.
         /// </summary>
         /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value.</param>
         /// <param name="message">The message to add to the Exception if value is null.</param>
         /// <returns>the specified <paramref name="value" />.</returns>
-        public static T EnsureNotNull<T>(this T value, string message)
+        public static T EnsureNotNull<T>([ValidatedNotNull] this T value, string message)
             where T : class
         {
             if (value == null)
@@ -35,13 +36,14 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
-        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an <see cref="ObjectIsNullException" />.
+        /// Ensures the specified <paramref name="value" /> is not null. Otherwise it throws an
+        /// <see cref="ObjectIsNullException" />.
         /// </summary>
         /// <typeparam name="T">The object type.</typeparam>
         /// <param name="value">The value.</param>
         /// <param name="message">Name of the parameter.</param>
         /// <returns>the specified <paramref name="value" />.</returns>
-        public static T? EnsureNotNull<T>(this T? value, string message)
+        public static T? EnsureNotNull<T>([ValidatedNotNull] this T? value, string message)
             where T : struct
         {
             if (value == null)
@@ -53,6 +55,24 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
+        /// Execute a call on the source if null, or return the default for the type TReturn.
+        /// </summary>
+        /// <param name="value">The value to check if null.</param>
+        /// <param name="call">The labmda to call if not null.</param>
+        /// <typeparam name="TSource">The source type.</typeparam>
+        /// <typeparam name="TReturn">The return type of the func.</typeparam>
+        /// <returns>The returned value from the call.</returns>
+        public static TReturn ExecuteOrNull<TSource, TReturn>([ValidatedNotNull] this TSource value, Func<TSource, TReturn> call)
+        {
+            if (value == null)
+            {
+                return default;
+            }
+
+            return call(value);
+        }
+
+        /// <summary>
         /// Extension method on object, which throws an <see cref="ArgumentNullException" /> if
         /// <paramref name="value" /> is null.
         /// </summary>
@@ -60,7 +80,7 @@ namespace Acme.Core.Extensions
         /// <param name="value">The value to check.</param>
         /// <param name="parameterName">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Value cannot be null. Parameter name: <paramref name="parameterName" />.</exception>
-        public static void ThrowIfNull<T>(this T value, string parameterName)
+        public static void ThrowIfNull<T>([ValidatedNotNull] this T value, string parameterName)
             where T : class
         {
             if (ReferenceEquals(value, null))
@@ -77,7 +97,7 @@ namespace Acme.Core.Extensions
         /// <param name="value">The value to check.</param>
         /// <param name="parameterName">Name of the parameter.</param>
         /// <exception cref="ArgumentNullException">Value cannot be null. Parameter name: <paramref name="parameterName" />.</exception>
-        public static void ThrowIfNull<T>(this T? value, string parameterName)
+        public static void ThrowIfNull<T>([ValidatedNotNull] this T? value, string parameterName)
             where T : struct
         {
             if (value == null)
@@ -87,21 +107,18 @@ namespace Acme.Core.Extensions
         }
 
         /// <summary>
-        /// Execute a call on the source if null, or return the default for the type TReturn.
+        /// Throws if zero.
         /// </summary>
-        /// <param name="value">The value to check if null.</param>
-        /// <param name="call">The labmda to call if not null.</param>
-        /// <typeparam name="TSource">The source type.</typeparam>
-        /// <typeparam name="TReturn">The return type of the func.</typeparam>
-        /// <returns>The returned value from the call.</returns>
-        public static TReturn ExecuteOrNull<TSource, TReturn>(this TSource value, Func<TSource, TReturn> call)
+        /// <typeparam name="T">Object.</typeparam>
+        /// <param name="value">The value.</param>
+        /// <param name="parameterName">Name of the parameter.</param>
+        public static void ThrowIfZero<T>([ValidatedNotNull] this T value, string parameterName)
+            where T : IComparable
         {
-            if (value == null)
+            if (value.CompareTo(0) == 0)
             {
-                return default;
+                throw new ArgumentNullException(parameterName);
             }
-
-            return call(value);
         }
     }
 }

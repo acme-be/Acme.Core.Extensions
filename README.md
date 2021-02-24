@@ -14,6 +14,11 @@ using Acme.Core.Extensions;
 ```
 
 ## Changes
+
+### 2.0.0
+* Add a method ThrowIfZero
+* Downgrade reference to StyleCop.Analyzers to 1.0.2
+
 ### 1.3.0
 * Add a method SecurityHelper.CreateCryptographicallySecureGuid
 
@@ -59,6 +64,7 @@ You can also have a look at the unit test project, it contains most of the exten
 * EnsureNotNull : Throws an ArgumentNullException if the object is null, or return the object. Help to validate that parameters are not null and follow. Works with class and nullable struct. Read more :  https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1062-validate-arguments-of-public-methods
 * ExecuteOrNull : Execute a call on the source if null, or return the default for the type TReturn.
 * ThrowIfNull : Throws an ArgumentNullException if the object is null. Help to validate that parameters are not null and follow. Works with class and nullable struct. Read more :  https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1062-validate-arguments-of-public-methods
+* ThrowIfZero : Throws an ArgumentNullException if the object is null or if the value equals 0.
 
 ## StringExtensions
 * ReplaceSpecialChars : Remove all special chars and accent from a string, can also replace spaces with '-'
