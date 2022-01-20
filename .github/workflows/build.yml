@@ -17,6 +17,10 @@ jobs:
 
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1.9.0
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x
 
       - uses: actions/checkout@v2
         with:
