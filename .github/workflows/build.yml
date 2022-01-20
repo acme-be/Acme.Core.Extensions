@@ -14,6 +14,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.11
+      
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1.1
+          
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
@@ -43,5 +47,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"acme-be_Acme.Core.Extensions" /o:"acme-be" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          <insert_your_build_command>
+          msbuild Acme.Core.Extensions\Acme.Core.Extensions.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
