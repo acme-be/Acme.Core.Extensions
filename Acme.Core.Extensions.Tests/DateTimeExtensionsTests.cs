@@ -21,9 +21,9 @@ public class DateTimeExtensionsTests
     [Fact]
     public void ToUnixTimeStamp()
     {
-        var date = new DateTime(1983, 05, 14, 07, 30, 42);
+        var date = new DateTime(1983, 05, 14, 07, 30, 42, DateTimeKind.Utc);
         var unixTimeStamp = date.ToUnixTimeStamp();
-        Assert.Equal(421738242, unixTimeStamp);
+        Assert.Equal(421745442, unixTimeStamp);
     }
 
     /// <summary>
@@ -32,7 +32,7 @@ public class DateTimeExtensionsTests
     [Fact]
     public void DateOrNullOk()
     {
-        DateTime? date = new DateTime(1983,5,14,23,56,0);
+        DateTime? date = new DateTime(1983,5,14,23,56,0, DateTimeKind.Utc);
         var returned = date.DateOrNull();
         Assert.Equal(new DateTime(1983, 5, 14), returned);
     }
